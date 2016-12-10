@@ -13,3 +13,4 @@ apidocs/docbox/*
 workbench/build.number
 workbench/docker
 build/*
+contentbox-*
