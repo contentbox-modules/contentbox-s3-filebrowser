@@ -1,0 +1,14 @@
+﻿User-agent: *
+Disallow: 
+Crawl-delay: 60
+Disallow: /coldbox/
+Disallow: /config/
+Disallow: /handlers/
+Disallow: /includes/
+Disallow: /layouts/
+Disallow: /interceptors/
+Disallow: /logs/
+Disallow: /model/
+Disallow: /modules/
+Disallow: /plugins/
+Disallow: /views/

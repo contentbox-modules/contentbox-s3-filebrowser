@@ -1,0 +1,45 @@
+{
+    "name":"Contentbox S3 Filebrowser",
+    "author":"You",
+    "version":"@build.version@+@build.number@",
+    "slug":"contentbox-s3-filebrowser",
+    "type":"modules",
+    "homepage":"",
+    "documentation":"",
+    "repository":{
+        "type":"git",
+        "url":""
+    },
+    "shortDescription":"Amazon S3 Drop-in filebrowser for Contentbox CMS",
+    "license":[
+        {
+            "type":"Apache2",
+            "url":"http://www.apache.org/licenses/LICENSE-2.0.html"
+        }
+    ],
+    "contributors":[
+        
+    ],
+    "engines":[
+        {
+            "type":"lucee",
+            "version":">4.5"
+        },
+        {
+            "type":"adobe",
+            "version":">9.02"
+        }
+    ],
+    "dependencies":{
+        "s3sdk":"stable"
+    },
+    "ignore":[
+        "**/.*",
+        "tests",
+        "apidocs",
+        "*/.md"
+    ],
+    "installPaths":{
+        "s3sdk":"modules/s3sdk"
+    }
+}
