@@ -16,7 +16,7 @@ component{
 			appName 					= "ContentBox Modular CMS",
 
 			//Development Settings
-			reinitPassword				= "7ADCC03F25FCD2595417DE10E0E9B88A",
+			reinitPassword				= "@fwPassword@",
 			handlersIndexAutoReload 	= false,
 
 			//Implicit Events
@@ -60,6 +60,17 @@ component{
 		// the value of the environment is a list of regex patterns to match the cgi.http_host.
 		environments = {
 			development = "local,127\.0\.0\.1"
+		};
+
+		s3sdk={
+			"uploads" : {
+				"bucket":"oss.silowebworks.com",
+				"prefix":"demo/contentbox-s3-filebrowser",
+				"url":"//oss.silowebworks.com.s3.amazonaws.com"
+			},
+			"filebrowser":{
+				"enabled":true
+			}
 		};
 
 		// Module Directives
