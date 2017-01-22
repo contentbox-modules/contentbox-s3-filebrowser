@@ -12,6 +12,7 @@ component{
 	this.mappings[ "/tests" ] = getDirectoryFromPath( getCurrentTemplatePath() );
 	rootPath = REReplaceNoCase( this.mappings[ "/tests" ], "tests(\\|/)", "" );
 	this.mappings[ "/root" ]   = rootPath;
+	this.mappings[ "/cborm" ]   = rootPath & "/modules/cborm";
 
 	//example CF Mappings
 	//this.mappings[ "/cbvalidation" ] 	= rootPath & "modules/cbvalidation";
