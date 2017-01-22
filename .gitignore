@@ -3,8 +3,8 @@ logs/*.log
 settings.xml
 .netbeans
 tests/results/*
-modules/*
-!modules/contentbox-s3-filebrowser
+modules/contentbox-installer
+modules/contentbox-dsncreator
 modules/contentbox-s3-filebrowser/modules/*
 coldbox/*
 testbox/*
@@ -13,4 +13,3 @@ apidocs/docbox/*
 workbench/build.number
 workbench/docker
 build/*
-contentbox-*
