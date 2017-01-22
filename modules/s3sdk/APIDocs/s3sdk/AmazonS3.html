@@ -1,0 +1,2647 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>AmazonS3</title>
+	<meta name="keywords" content="s3sdk.concurrent.Callable interface">
+	<!-- common assets -->
+	
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel ="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+<link rel ="stylesheet" type="text/css" href="../stylesheet.css">
+	
+<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,700,700italic|Ubuntu+Mono' rel='stylesheet' type='text/css' />
+	
+<script src="../bootstrap/js/jquery-2.1.0.min.js" type="text/javascript"></script>
+<script src="../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+<script>
+$(document).ready(function() {
+	// Global Tool Tip Settings
+	$( '[title]' ).tooltip({
+		 animation: 'slide',
+		 delay: { show: 250, hide: 250 }
+	});
+});
+</script>
+	<!-- syntax highlighter -->
+	<link type="text/css" rel="stylesheet" href="../highlighter/styles/shCoreDefault.css">
+	<script src="../highlighter/scripts/shCore.js"></script>
+	<script src="../highlighter/scripts/shBrushColdFusion.js"></script>
+	<script src="../highlighter/scripts/shBrushXml.js"></script>
+	<script src="../highlighter/scripts/shBrushSql.js"></script>
+	<script src="../highlighter/scripts/shBrushJScript.js"></script>
+	<script src="../highlighter/scripts/shBrushJava.js"></script>
+	<script src="../highlighter/scripts/shBrushCss.js"></script>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
+</head>
+
+<body class="withNavbar">
+
+
+
+
+
+
+<!-- ========= START OF NAVBAR ======= -->
+<a name="navbar_top"></a>
+<a href="#skip-navbar_top" title="skip navigation links"></a>	
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+    
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#class-navigation">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#"><strong>S3SDK v3.0.0</strong></a>
+		</div>
+
+	    <div class="collapse navbar-collapse" id="class-navigation">
+	    	<ul class="nav navbar-nav">
+				
+					
+					<li><a href="../overview-summary.html"><i class="glyphicon glyphicon-plane"></i> overview</a></li>
+					
+				
+
+				
+					<li><a href="package-summary.html"><i class="glyphicon glyphicon-folder-open"></i> &nbsp;package</a></li>
+				
+
+			  	
+					<li class="dropdown active">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-file"></i> class <b class="caret"></b></a>
+
+						<ul class="dropdown-menu">
+							<li><a href="#class">Class Definition</a></li>
+							<li><a href="#constructor_summary">Constructor Summary</a></li>
+							<li><a href="#constructor_detail">Constructor Detail</a></li>
+							<li><a href="#inherited_methods">Inherited Methods</a></li>
+							<li><a href="#method_summary">Method Summary</a></li>
+							<li><a href="#method_detail">Method Detail</a></li>
+							<li><a href="#property_summary">Property Summary</a></li>
+							<li><a href="#property_detail">Property Detail</a></li>
+							
+						</ul>
+					</li>
+				
+	      	</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="../index.html?s3sdk/AmazonS3.html" target="_top">
+					<i class="glyphicon glyphicon-fullscreen"></i> Frames
+					</a>
+				</li>
+			</ul>
+	    </div>
+
+	</div>
+</nav>	
+
+<a name="skip-navbar_top"></a>
+<!-- ========= END OF NAVBAR ========= -->
+
+<!-- ======== start of class data ======== -->
+<a name="class"><!-- --></a>
+
+<!-- Package -->
+<div class="pull-right">
+	<a href="package-summary.html" title="Package: s3sdk"><span class="label label-success">s3sdk</span></a>
+</div>
+
+<h2>
+
+
+Class
+
+ AmazonS3</h2>
+
+
+
+
+
+
+
+
+	
+		
+	
+	
+
+	
+		
+		
+			
+		
+	
+	
+
+
+<!-- Inheritance Tree-->
+<pre style="background:white">lucee.Component
+    <img src="../resources/inherit.gif" alt="extended by ">s3sdk.AmazonS3
+</pre>
+
+
+
+	
+	
+
+
+
+
+
+
+
+<div id="class-hint">
+	<p>Amazon S3 REST Wrapper</p>
+</div>
+
+
+<!-- Clas Attributes -->
+<div class="panel panel-info">
+	<div class="panel-heading"><strong>Class Attributes:</strong></div>
+		<div class="panel-body">
+		
+		
+			
+		
+			
+		
+			
+			
+			<li class="label label-danger label-annotations">
+				singleton 
+				
+			</li>
+			&nbsp;
+			
+		
+			
+			
+			<li class="label label-danger label-annotations">
+				output 
+				
+				: false		
+				
+			</li>
+			&nbsp;
+			
+		
+			
+		
+			
+			
+			<li class="label label-danger label-annotations">
+				synchronized 
+				
+				: false		
+				
+			</li>
+			&nbsp;
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+			
+			<li class="label label-danger label-annotations">
+				accessors 
+				
+				: true		
+				
+			</li>
+			&nbsp;
+			
+		
+			
+		
+			
+			
+			<li class="label label-danger label-annotations">
+				persistent 
+				
+				: false		
+				
+			</li>
+			&nbsp;
+			
+		
+			
+		
+			
+		
+		
+	</div>
+</div>
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="property_summary"><!-- --></a>
+<table class="table table-bordered table-hover">
+	<tr class="info">
+		<th align="left" colspan="5">
+			<strong>Property Summary</strong>
+		</th>
+	</tr>
+	<tr class="info">
+		<th align="left">
+			<strong>type</strong>
+		</th>
+		<th align="left">
+			<strong>property</strong>
+		</th>
+		<th align="left">
+			<strong>default</strong>
+		</th>
+		<th align="left">
+			<strong>serializable</strong>
+		</th>
+		<th align="left">
+			<strong>required</strong>
+		</th>
+	</tr>
+
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="AmazonS3.html#accessKey()">accessKey</A></strong> 
+			<br>
+			
+			<br><br>
+			<ul>
+			
+				
+			
+				
+				<li class="label label-default label-annotations">access = public</li>
+				
+			
+				
+			
+				
+			
+				
+				<li class="label label-default label-annotations">returntype = any</li>
+				
+			
+				
+			
+				
+			
+				
+			
+			</ul>
+
+		</td>
+		<td align="right" valign="top" width="1%">
+			
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				true
+			</code>
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				false
+			</code>
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="AmazonS3.html#encryption_charset()">encryption_charset</A></strong> 
+			<br>
+			
+			<br><br>
+			<ul>
+			
+				
+			
+				
+				<li class="label label-default label-annotations">access = public</li>
+				
+			
+				
+			
+				
+			
+				
+				<li class="label label-default label-annotations">returntype = any</li>
+				
+			
+				
+			
+				
+			
+				
+			
+			</ul>
+
+		</td>
+		<td align="right" valign="top" width="1%">
+			
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				true
+			</code>
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				false
+			</code>
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="AmazonS3.html#log()">log</A></strong> 
+			<br>
+			
+			<br><br>
+			<ul>
+			
+				
+			
+				
+				<li class="label label-default label-annotations">access = public</li>
+				
+			
+				
+			
+				
+			
+				
+				<li class="label label-default label-annotations">returntype = any</li>
+				
+			
+				
+				<li class="label label-default label-annotations">inject = logbox:logger:{this}</li>
+				
+			
+				
+			
+				
+			
+				
+			
+			</ul>
+
+		</td>
+		<td align="right" valign="top" width="1%">
+			
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				true
+			</code>
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				false
+			</code>
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="AmazonS3.html#secretKey()">secretKey</A></strong> 
+			<br>
+			
+			<br><br>
+			<ul>
+			
+				
+			
+				
+				<li class="label label-default label-annotations">access = public</li>
+				
+			
+				
+			
+				
+			
+				
+				<li class="label label-default label-annotations">returntype = any</li>
+				
+			
+				
+			
+				
+			
+				
+			
+			</ul>
+
+		</td>
+		<td align="right" valign="top" width="1%">
+			
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				true
+			</code>
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				false
+			</code>
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="AmazonS3.html#ssl()">ssl</A></strong> 
+			<br>
+			
+			<br><br>
+			<ul>
+			
+				
+			
+				
+				<li class="label label-default label-annotations">access = public</li>
+				
+			
+				
+			
+				
+			
+				
+				<li class="label label-default label-annotations">returntype = any</li>
+				
+			
+				
+			
+				
+			
+				
+			
+			</ul>
+
+		</td>
+		<td align="right" valign="top" width="1%">
+			
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				true
+			</code>
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				false
+			</code>
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="AmazonS3.html#URLEndPoint()">URLEndPoint</A></strong> 
+			<br>
+			
+			<br><br>
+			<ul>
+			
+				
+			
+				
+				<li class="label label-default label-annotations">access = public</li>
+				
+			
+				
+			
+				
+			
+				
+				<li class="label label-default label-annotations">returntype = any</li>
+				
+			
+				
+			
+				
+			
+				
+			
+			</ul>
+
+		</td>
+		<td align="right" valign="top" width="1%">
+			
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				true
+			</code>
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				false
+			</code>
+		</td>
+	</tr>
+	
+	</tr>
+</table>
+
+
+
+	
+	
+	<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+	<a name="constructor_summary"><!-- --></a>
+	<table class="table table-bordered table-hover">
+		<tr class="info">
+			<th align="left" colspan="2">
+				<strong>Constructor Summary</strong>
+			</th>
+		</tr>
+		<tr>
+			
+			<td>
+				<strong><a href="AmazonS3.html#init()">init</A></strong>(any accessKey, any secretKey, [any encryption_charset='utf-8'], [any ssl='false'])
+				<br>
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Constructor.
+				
+			</td>
+		</tr>
+	</table>
+
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="method_summary"><!-- --></a>
+<table class="table table-bordered table-hover">
+	<tr class="info">
+		<th align="left" colspan="2">
+			<strong>Method Summary</strong>
+		</th>
+	</tr>
+
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>boolean</code>
+		</td>
+		<td>
+			<strong><a href="AmazonS3.html#copyObject()">copyObject</A></strong>(string fromBucket, string fromURI, string toBucket, string toURI, [string acl='[runtime expression]'], [struct metaHeaders='[runtime expression]'])
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copies an object.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>struct</code>
+		</td>
+		<td>
+			<strong><a href="AmazonS3.html#createMetaHeaders()">createMetaHeaders</A></strong>([struct metaHeaders='[runtime expression]'])
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create a structure of amazon enabled metadata headers.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="AmazonS3.html#createSignature()">createSignature</A></strong>(any stringToSign)
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create request signature according to AWS standards.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>boolean</code>
+		</td>
+		<td>
+			<strong><a href="AmazonS3.html#deleteBucket()">deleteBucket</A></strong>(string bucketName)
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deletes a bucket.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>boolean</code>
+		</td>
+		<td>
+			<strong><a href="AmazonS3.html#deleteObject()">deleteObject</A></strong>(string bucketName, string uri)
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deletes an object.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="AmazonS3.html#getAccessKey()">getAccessKey</A></strong>()
+			<br>
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>array</code>
+		</td>
+		<td>
+			<strong><a href="AmazonS3.html#getAcessControlPolicy()">getAcessControlPolicy</A></strong>(string bucketName, [string uri=''])
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get's a bucket or object's ACL policy'.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="AmazonS3.html#getAuthenticatedURL()">getAuthenticatedURL</A></strong>(string bucketName, string uri, [string minutesValid='60'], [boolean virtualHostStyle='false'], [boolean useSSL='false'])
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a query string authenticated URL to an object in S3.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>array</code>
+		</td>
+		<td>
+			<strong><a href="AmazonS3.html#getBucket()">getBucket</A></strong>(string bucketName, [string prefix=''], [string marker=''], [string maxKeys=''], [string delimiter=''])
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lists information about the objects of a bucket.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="AmazonS3.html#getBucketLocation()">getBucketLocation</A></strong>(string bucketName)
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get bucket location.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="AmazonS3.html#getBucketVersionStatus()">getBucketVersionStatus</A></strong>(string bucketName)
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get bucket location.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="AmazonS3.html#getEncryption_charset()">getEncryption_charset</A></strong>()
+			<br>
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="AmazonS3.html#getLog()">getLog</A></strong>()
+			<br>
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>struct</code>
+		</td>
+		<td>
+			<strong><a href="AmazonS3.html#getObjectInfo()">getObjectInfo</A></strong>(string bucketName, string uri)
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get an object's metadata information.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="AmazonS3.html#getSecretKey()">getSecretKey</A></strong>()
+			<br>
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="AmazonS3.html#getSsl()">getSsl</A></strong>()
+			<br>
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="AmazonS3.html#getURLEndPoint()">getURLEndPoint</A></strong>()
+			<br>
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;binary</code>
+		</td>
+		<td>
+			<strong><a href="AmazonS3.html#HMAC_SHA1()">HMAC_SHA1</A></strong>(string signKey, string signMessage)
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NSA SHA-1 Algorithm: RFC 2104HMAC-SHA1 .
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>array</code>
+		</td>
+		<td>
+			<strong><a href="AmazonS3.html#listBuckets()">listBuckets</A></strong>()
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List all available buckets.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>boolean</code>
+		</td>
+		<td>
+			<strong><a href="AmazonS3.html#putBucket()">putBucket</A></strong>(string bucketName, [string acl='[runtime expression]'], [string location='USA'])
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a bucket.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="AmazonS3.html#putObject()">putObject</A></strong>(string bucketName, string uri, [any data=''], [string contentDisposition=''], [string contentType='text/plain'], [numeric HTTPTimeout='300'], [string cacheControl='no-store, no-cache, must-revalidate'], [string expires=''], [string acl='[runtime expression]'], [struct metaHeaders='[runtime expression]'])
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Puts an object into a bucket and returns the etag.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="AmazonS3.html#putObjectFile()">putObjectFile</A></strong>(string bucketName, string filepath, [string uri=''], [string contentType='binary/octet-stream'], [numeric HTTPTimeout='300'], [string cacheControl='no-store, no-cache, must-revalidate'], [string expires=''], [string acl='[runtime expression]'], [struct metaHeaders='[runtime expression]'])
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Puts an object from a local file into a bucket and returns the etag.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="AmazonS3.html#putObjectFolder()">putObjectFolder</A></strong>(string bucketName, string uri='', [string contentType='binary/octet-stream'], [numeric HTTPTimeout='300'], [string cacheControl='no-store, no-cache, must-revalidate'], [string expires=''], [string acl='[runtime expression]'], [struct metaHeaders='[runtime expression]'])
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Puts an object from a local file into a bucket and returns the etag.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>boolean</code>
+		</td>
+		<td>
+			<strong><a href="AmazonS3.html#renameObject()">renameObject</A></strong>(string oldBucketName, string oldFileKey, string newBucketName, string newFileKey)
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Renames an object by copying then deleting original.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;struct</code>
+		</td>
+		<td>
+			<strong><a href="AmazonS3.html#S3Request()">S3Request</A></strong>([string method='GET'], [string resource=''], [any body=''], [struct headers='[runtime expression]'], [struct amzHeaders='[runtime expression]'], [struct parameters='[runtime expression]'], [numeric timeout='20'])
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Invoke an Amazon REST Call.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="AmazonS3.html#setAccessKey()">setAccessKey</A></strong>(any accessKey)
+			<br>
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="AmazonS3.html#setAuth()">setAuth</A></strong>(string accessKey='', string secretKey='')
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the Amazon credentials.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>boolean</code>
+		</td>
+		<td>
+			<strong><a href="AmazonS3.html#setBucketVersionStatus()">setBucketVersionStatus</A></strong>(string bucketName, [boolean version='true'])
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set bucket versioning.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="AmazonS3.html#setEncryption_charset()">setEncryption_charset</A></strong>(any encryption_charset)
+			<br>
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="AmazonS3.html#setLog()">setLog</A></strong>(any log)
+			<br>
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="AmazonS3.html#setSecretKey()">setSecretKey</A></strong>(any secretKey)
+			<br>
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="AmazonS3.html#setSSL()">setSSL</A></strong>([boolean useSSL='true'])
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set SSL flag and alter the internal URL End point pointer.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="AmazonS3.html#setURLEndPoint()">setURLEndPoint</A></strong>(any URLEndPoint)
+			<br>
+			
+		</td>
+	</tr>
+	
+</table>
+
+
+
+<a name="inherited_methods"><!-- --></a>
+
+
+	
+
+	
+
+	&nbsp;
+	<a name="methods_inherited_from_class_lucee.Component"><!-- --></a>
+	<table class="table table-hover table-bordered">
+		<tr class="info">
+			<th align="left">
+				<strong>Methods inherited from class <kbd>lucee.Component</kbd></strong>
+			</th>
+		</tr>
+		<tr>
+			<td>
+				
+				
+				
+				
+				
+					<span class="label label-warning"><em>None</em></span>
+				
+			</td>
+		</tr>
+	</table>
+
+
+<hr>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+	<a name="constructor_detail"><!-- --></a>
+	<table class="table table-bordered">
+		<tr class="info">
+			<th colspan="1" align="left">
+				<strong>Constructor Detail</strong>
+			</th>
+		</tr>
+	</table>
+
+	<a name="init()"><!-- --></a><h3>
+	init</h3>
+	<kbd>public <strong>init</strong>(any accessKey, any secretKey, [any encryption_charset='utf-8'], [any ssl='false'])</kbd>
+
+	<br><br>
+
+	
+	<p>Constructor</p>
+	
+
+	
+	<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+			<dd><code>accessKey</code></dd>
+		
+			<dd><code>secretKey</code></dd>
+		
+			<dd><code>encryption_charset</code></dd>
+		
+			<dd><code>ssl</code></dd>
+		
+	</dl>
+	
+	<hr>
+
+
+<!-- ============ PROPERTY DETAIL ========== -->
+
+	<a name="property_detail"><!-- --></a>
+	<table class="table table-bordered">
+		<tr class="info">
+			<th colspan="1" align="left">
+				<strong>Property Detail</strong>
+			</th>
+		</tr>
+	</table>
+
+	
+		
+		<a name="accessKey()"><!-- --></a>
+		<h3>accessKey</h3>
+
+		<kbd>
+			property any 
+			<strong>accessKey</strong>
+			
+		</kbd>
+
+		<br><br>
+		
+
+		<dl>
+		<dt><strong>Attributes:</strong></dt>
+		
+			
+		
+			
+			<dd><code>access</code> - public</dd>
+			
+		
+			
+			<dd><code>required</code> - false</dd>
+			
+		
+			
+		
+			
+			<dd><code>returntype</code> - any</dd>
+			
+		
+			
+		
+			
+		
+			
+			<dd><code>serializable</code> - true</dd>
+			
+		
+		</dl>
+
+		<hr>
+	
+		
+		<a name="encryption_charset()"><!-- --></a>
+		<h3>encryption_charset</h3>
+
+		<kbd>
+			property any 
+			<strong>encryption_charset</strong>
+			
+		</kbd>
+
+		<br><br>
+		
+
+		<dl>
+		<dt><strong>Attributes:</strong></dt>
+		
+			
+		
+			
+			<dd><code>access</code> - public</dd>
+			
+		
+			
+			<dd><code>required</code> - false</dd>
+			
+		
+			
+		
+			
+			<dd><code>returntype</code> - any</dd>
+			
+		
+			
+		
+			
+		
+			
+			<dd><code>serializable</code> - true</dd>
+			
+		
+		</dl>
+
+		<hr>
+	
+		
+		<a name="log()"><!-- --></a>
+		<h3>log</h3>
+
+		<kbd>
+			property any 
+			<strong>log</strong>
+			
+		</kbd>
+
+		<br><br>
+		
+
+		<dl>
+		<dt><strong>Attributes:</strong></dt>
+		
+			
+		
+			
+			<dd><code>access</code> - public</dd>
+			
+		
+			
+			<dd><code>required</code> - false</dd>
+			
+		
+			
+		
+			
+			<dd><code>returntype</code> - any</dd>
+			
+		
+			
+			<dd><code>inject</code> - logbox:logger:{this}</dd>
+			
+		
+			
+		
+			
+		
+			
+			<dd><code>serializable</code> - true</dd>
+			
+		
+		</dl>
+
+		<hr>
+	
+		
+		<a name="secretKey()"><!-- --></a>
+		<h3>secretKey</h3>
+
+		<kbd>
+			property any 
+			<strong>secretKey</strong>
+			
+		</kbd>
+
+		<br><br>
+		
+
+		<dl>
+		<dt><strong>Attributes:</strong></dt>
+		
+			
+		
+			
+			<dd><code>access</code> - public</dd>
+			
+		
+			
+			<dd><code>required</code> - false</dd>
+			
+		
+			
+		
+			
+			<dd><code>returntype</code> - any</dd>
+			
+		
+			
+		
+			
+		
+			
+			<dd><code>serializable</code> - true</dd>
+			
+		
+		</dl>
+
+		<hr>
+	
+		
+		<a name="ssl()"><!-- --></a>
+		<h3>ssl</h3>
+
+		<kbd>
+			property any 
+			<strong>ssl</strong>
+			
+		</kbd>
+
+		<br><br>
+		
+
+		<dl>
+		<dt><strong>Attributes:</strong></dt>
+		
+			
+		
+			
+			<dd><code>access</code> - public</dd>
+			
+		
+			
+			<dd><code>required</code> - false</dd>
+			
+		
+			
+		
+			
+			<dd><code>returntype</code> - any</dd>
+			
+		
+			
+		
+			
+		
+			
+			<dd><code>serializable</code> - true</dd>
+			
+		
+		</dl>
+
+		<hr>
+	
+		
+		<a name="URLEndPoint()"><!-- --></a>
+		<h3>URLEndPoint</h3>
+
+		<kbd>
+			property any 
+			<strong>URLEndPoint</strong>
+			
+		</kbd>
+
+		<br><br>
+		
+
+		<dl>
+		<dt><strong>Attributes:</strong></dt>
+		
+			
+		
+			
+			<dd><code>access</code> - public</dd>
+			
+		
+			
+			<dd><code>required</code> - false</dd>
+			
+		
+			
+		
+			
+			<dd><code>returntype</code> - any</dd>
+			
+		
+			
+		
+			
+		
+			
+			<dd><code>serializable</code> - true</dd>
+			
+		
+		</dl>
+
+		<hr>
+	
+
+
+
+
+
+
+
+
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<a name="method_detail"><!-- --></a>
+<table class="table table-bordered">
+	<tr class="info">
+		<th colspan="1" align="left">
+			<strong>Method Detail</strong>
+		</th>
+	</tr>
+</table>
+
+
+	
+	<a name="copyObject()"><!-- --></a>
+	<h3>copyObject</h3>
+	
+	<kbd>public boolean <strong>copyObject</strong>(string fromBucket, string fromURI, string toBucket, string toURI, [string acl='[runtime expression]'], [struct metaHeaders='[runtime expression]'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Copies an object. False if the same object or error copying object.</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>fromBucket</code> - The source bucket</dd>
+		
+		<dd><code>fromURI</code> - The source uri</dd>
+		
+		<dd><code>toBucket</code> - The destination bucket</dd>
+		
+		<dd><code>toURI</code> - The destination uri</dd>
+		
+		<dd><code>acl</code> - The default Amazon security access policy</dd>
+		
+		<dd><code>metaHeaders</code> - Replace metadata headers to the file by passing a struct of name-value pairs</dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="createMetaHeaders()"><!-- --></a>
+	<h3>createMetaHeaders</h3>
+	
+	<kbd>public struct <strong>createMetaHeaders</strong>([struct metaHeaders='[runtime expression]'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Create a structure of amazon enabled metadata headers</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>metaHeaders</code> - Add additonal metadata headers to the file by passing a struct of name-value pairs</dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="createSignature()"><!-- --></a>
+	<h3>createSignature</h3>
+	
+	<kbd>public any <strong>createSignature</strong>(any stringToSign)</kbd>
+	
+	<br><br>
+
+	
+		<p>Create request signature according to AWS standards</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>stringToSign</code></dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="deleteBucket()"><!-- --></a>
+	<h3>deleteBucket</h3>
+	
+	<kbd>public boolean <strong>deleteBucket</strong>(string bucketName)</kbd>
+	
+	<br><br>
+
+	
+		<p>Deletes a bucket.</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>bucketName</code></dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="deleteObject()"><!-- --></a>
+	<h3>deleteObject</h3>
+	
+	<kbd>public boolean <strong>deleteObject</strong>(string bucketName, string uri)</kbd>
+	
+	<br><br>
+
+	
+		<p>Deletes an object.</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>bucketName</code> - The bucket name</dd>
+		
+		<dd><code>uri</code> - The file object uri to remove</dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getAccessKey()"><!-- --></a>
+	<h3>getAccessKey</h3>
+	
+	<kbd>public string <strong>getAccessKey</strong>()</kbd>
+	
+	<br><br>
+
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getAcessControlPolicy()"><!-- --></a>
+	<h3>getAcessControlPolicy</h3>
+	
+	<kbd>public array <strong>getAcessControlPolicy</strong>(string bucketName, [string uri=''])</kbd>
+	
+	<br><br>
+
+	
+		<p>Get's a bucket or object's ACL policy'</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>bucketName</code> - The bucket name to list</dd>
+		
+		<dd><code>uri</code> - The object URI to get the policy</dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getAuthenticatedURL()"><!-- --></a>
+	<h3>getAuthenticatedURL</h3>
+	
+	<kbd>public string <strong>getAuthenticatedURL</strong>(string bucketName, string uri, [string minutesValid='60'], [boolean virtualHostStyle='false'], [boolean useSSL='false'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Returns a query string authenticated URL to an object in S3.</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>bucketName</code> - The bucket the object resides in</dd>
+		
+		<dd><code>uri</code> - The uri to the object to create a link for</dd>
+		
+		<dd><code>minutesValid</code> - The minutes the link is valid for. Defaults to 60 minutes</dd>
+		
+		<dd><code>virtualHostStyle</code> - Whether to use virtual bucket style or path style. Defaults to virtual</dd>
+		
+		<dd><code>useSSL</code> - Use SSL on http call</dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getBucket()"><!-- --></a>
+	<h3>getBucket</h3>
+	
+	<kbd>public array <strong>getBucket</strong>(string bucketName, [string prefix=''], [string marker=''], [string maxKeys=''], [string delimiter=''])</kbd>
+	
+	<br><br>
+
+	
+		<p>Lists information about the objects of a bucket</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>bucketName</code> - The bucket name to list</dd>
+		
+		<dd><code>prefix</code> - Limits the response to keys which begin with the indicated prefix.</dd>
+		
+		<dd><code>marker</code> - Indicates where in the bucket to begin listing.</dd>
+		
+		<dd><code>maxKeys</code> - The maximum number of keys you'd like to see in the response body</dd>
+		
+		<dd><code>delimiter</code> - The delimiter to use in the keys</dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getBucketLocation()"><!-- --></a>
+	<h3>getBucketLocation</h3>
+	
+	<kbd>public string <strong>getBucketLocation</strong>(string bucketName)</kbd>
+	
+	<br><br>
+
+	
+		<p>Get bucket location.</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>bucketName</code> - The bucket name to get info on</dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getBucketVersionStatus()"><!-- --></a>
+	<h3>getBucketVersionStatus</h3>
+	
+	<kbd>public string <strong>getBucketVersionStatus</strong>(string bucketName)</kbd>
+	
+	<br><br>
+
+	
+		<p>Get bucket location.</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>bucketName</code> - The bucket name to get info on</dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getEncryption_charset()"><!-- --></a>
+	<h3>getEncryption_charset</h3>
+	
+	<kbd>public string <strong>getEncryption_charset</strong>()</kbd>
+	
+	<br><br>
+
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getLog()"><!-- --></a>
+	<h3>getLog</h3>
+	
+	<kbd>public string <strong>getLog</strong>()</kbd>
+	
+	<br><br>
+
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getObjectInfo()"><!-- --></a>
+	<h3>getObjectInfo</h3>
+	
+	<kbd>public struct <strong>getObjectInfo</strong>(string bucketName, string uri)</kbd>
+	
+	<br><br>
+
+	
+		<p>Get an object's metadata information</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>bucketName</code> - The bucket the object resides in</dd>
+		
+		<dd><code>uri</code> - The object URI to retrieve info from</dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getSecretKey()"><!-- --></a>
+	<h3>getSecretKey</h3>
+	
+	<kbd>public string <strong>getSecretKey</strong>()</kbd>
+	
+	<br><br>
+
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getSsl()"><!-- --></a>
+	<h3>getSsl</h3>
+	
+	<kbd>public string <strong>getSsl</strong>()</kbd>
+	
+	<br><br>
+
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getURLEndPoint()"><!-- --></a>
+	<h3>getURLEndPoint</h3>
+	
+	<kbd>public string <strong>getURLEndPoint</strong>()</kbd>
+	
+	<br><br>
+
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="HMAC_SHA1()"><!-- --></a>
+	<h3>HMAC_SHA1</h3>
+	
+	<kbd>private binary <strong>HMAC_SHA1</strong>(string signKey, string signMessage)</kbd>
+	
+	<br><br>
+
+	
+		<p>NSA SHA-1 Algorithm: RFC 2104HMAC-SHA1 </p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>signKey</code></dd>
+		
+		<dd><code>signMessage</code></dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="listBuckets()"><!-- --></a>
+	<h3>listBuckets</h3>
+	
+	<kbd>public array <strong>listBuckets</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>List all available buckets.</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="putBucket()"><!-- --></a>
+	<h3>putBucket</h3>
+	
+	<kbd>public boolean <strong>putBucket</strong>(string bucketName, [string acl='[runtime expression]'], [string location='USA'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Creates a bucket</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>bucketName</code> - The name of the bucket to create</dd>
+		
+		<dd><code>acl</code> - The ACL permissions to apply. Use the this scope constants for ease of use.</dd>
+		
+		<dd><code>location</code> - The location of the storage, defaults to USA or EU</dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="putObject()"><!-- --></a>
+	<h3>putObject</h3>
+	
+	<kbd>public string <strong>putObject</strong>(string bucketName, string uri, [any data=''], [string contentDisposition=''], [string contentType='text/plain'], [numeric HTTPTimeout='300'], [string cacheControl='no-store, no-cache, must-revalidate'], [string expires=''], [string acl='[runtime expression]'], [struct metaHeaders='[runtime expression]'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Puts an object into a bucket and returns the etag</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>bucketName</code> - The bucket to store in</dd>
+		
+		<dd><code>uri</code> - The destination uri key to use when saving the object</dd>
+		
+		<dd><code>data</code> - The content to save as data, this can be binary,string or anything you like.</dd>
+		
+		<dd><code>contentDisposition</code> - The content-disposition header to use when downloading file</dd>
+		
+		<dd><code>contentType</code> - The file/data content type, defaults to text/plain. For plain binary use: binary/octet-stream</dd>
+		
+		<dd><code>HTTPTimeout</code> - The HTTP timeout to use</dd>
+		
+		<dd><code>cacheControl</code> - The caching header to send. Defaults to no caching. Example: public,max-age=864000  (10days). For more info look here: http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9</dd>
+		
+		<dd><code>expires</code> - Sets the expiration header of the object in days.</dd>
+		
+		<dd><code>acl</code> - The default Amazon security access policy</dd>
+		
+		<dd><code>metaHeaders</code> - Add additonal metadata headers to the file by passing a struct of name-value pairs</dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="putObjectFile()"><!-- --></a>
+	<h3>putObjectFile</h3>
+	
+	<kbd>public string <strong>putObjectFile</strong>(string bucketName, string filepath, [string uri=''], [string contentType='binary/octet-stream'], [numeric HTTPTimeout='300'], [string cacheControl='no-store, no-cache, must-revalidate'], [string expires=''], [string acl='[runtime expression]'], [struct metaHeaders='[runtime expression]'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Puts an object from a local file into a bucket and returns the etag</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>bucketName</code> - The bucket to store in</dd>
+		
+		<dd><code>filepath</code> - The absolute file path to read in binary and upload</dd>
+		
+		<dd><code>uri</code> - The destination uri key to use when saving the object, if not used, the name of the file will be used.</dd>
+		
+		<dd><code>contentType</code> - The file content type, defaults to: binary/octet-stream</dd>
+		
+		<dd><code>HTTPTimeout</code> - The HTTP timeout to use</dd>
+		
+		<dd><code>cacheControl</code> - The caching header to send. Defaults to no caching. Example: public,max-age=864000  (10days). For more info look here: http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9</dd>
+		
+		<dd><code>expires</code> - Sets the expiration header of the object in days.</dd>
+		
+		<dd><code>acl</code> - The default Amazon security access policy</dd>
+		
+		<dd><code>metaHeaders</code> - Add additonal metadata headers to the file by passing a struct of name-value pairs</dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="putObjectFolder()"><!-- --></a>
+	<h3>putObjectFolder</h3>
+	
+	<kbd>public string <strong>putObjectFolder</strong>(string bucketName, string uri='', [string contentType='binary/octet-stream'], [numeric HTTPTimeout='300'], [string cacheControl='no-store, no-cache, must-revalidate'], [string expires=''], [string acl='[runtime expression]'], [struct metaHeaders='[runtime expression]'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Puts an object from a local file into a bucket and returns the etag</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>bucketName</code> - The bucket to store in</dd>
+		
+		<dd><code>uri</code> - The destination uri key to use when saving the object, if not used, the name of the file will be used.</dd>
+		
+		<dd><code>contentType</code> - The file content type, defaults to: binary/octet-stream</dd>
+		
+		<dd><code>HTTPTimeout</code> - The HTTP timeout to use</dd>
+		
+		<dd><code>cacheControl</code> - The caching header to send. Defaults to no caching. Example: public,max-age=864000  (10days). For more info look here: http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9</dd>
+		
+		<dd><code>expires</code> - Sets the expiration header of the object in days.</dd>
+		
+		<dd><code>acl</code> - The default Amazon security access policy</dd>
+		
+		<dd><code>metaHeaders</code> - Add additonal metadata headers to the file by passing a struct of name-value pairs</dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="renameObject()"><!-- --></a>
+	<h3>renameObject</h3>
+	
+	<kbd>public boolean <strong>renameObject</strong>(string oldBucketName, string oldFileKey, string newBucketName, string newFileKey)</kbd>
+	
+	<br><br>
+
+	
+		<p>Renames an object by copying then deleting original.</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>oldBucketName</code></dd>
+		
+		<dd><code>oldFileKey</code></dd>
+		
+		<dd><code>newBucketName</code></dd>
+		
+		<dd><code>newFileKey</code></dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="S3Request()"><!-- --></a>
+	<h3>S3Request</h3>
+	
+	<kbd>private struct <strong>S3Request</strong>([string method='GET'], [string resource=''], [any body=''], [struct headers='[runtime expression]'], [struct amzHeaders='[runtime expression]'], [struct parameters='[runtime expression]'], [numeric timeout='20'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Invoke an Amazon REST Call</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>method</code> - The HTTP method to invoke</dd>
+		
+		<dd><code>resource</code> - The resource to hit in the amazon s3 service.</dd>
+		
+		<dd><code>body</code> - The body content of the request if passed.</dd>
+		
+		<dd><code>headers</code> - An struct of HTTP headers to send</dd>
+		
+		<dd><code>amzHeaders</code> - An struct of amz header name-value pairs to send</dd>
+		
+		<dd><code>parameters</code> - An struct of HTTP URL parameters to send in the request</dd>
+		
+		<dd><code>timeout</code> - The default call timeout</dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="setAccessKey()"><!-- --></a>
+	<h3>setAccessKey</h3>
+	
+	<kbd>public any <strong>setAccessKey</strong>(any accessKey)</kbd>
+	
+	<br><br>
+
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>accessKey</code></dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="setAuth()"><!-- --></a>
+	<h3>setAuth</h3>
+	
+	<kbd>public void <strong>setAuth</strong>(string accessKey='', string secretKey='')</kbd>
+	
+	<br><br>
+
+	
+		<p>Set the Amazon credentials</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>accessKey</code> - The amazon access key</dd>
+		
+		<dd><code>secretKey</code> - The amazon secret key</dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="setBucketVersionStatus()"><!-- --></a>
+	<h3>setBucketVersionStatus</h3>
+	
+	<kbd>public boolean <strong>setBucketVersionStatus</strong>(string bucketName, [boolean version='true'])</kbd>
+	
+	<br><br>
+
+	
+		<p>set bucket versioning</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>bucketName</code> - The name of the bucket to create</dd>
+		
+		<dd><code>version</code> - the version status enabled/disabled.</dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="setEncryption_charset()"><!-- --></a>
+	<h3>setEncryption_charset</h3>
+	
+	<kbd>public any <strong>setEncryption_charset</strong>(any encryption_charset)</kbd>
+	
+	<br><br>
+
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>encryption_charset</code></dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="setLog()"><!-- --></a>
+	<h3>setLog</h3>
+	
+	<kbd>public any <strong>setLog</strong>(any log)</kbd>
+	
+	<br><br>
+
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>log</code></dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="setSecretKey()"><!-- --></a>
+	<h3>setSecretKey</h3>
+	
+	<kbd>public any <strong>setSecretKey</strong>(any secretKey)</kbd>
+	
+	<br><br>
+
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>secretKey</code></dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="setSSL()"><!-- --></a>
+	<h3>setSSL</h3>
+	
+	<kbd>public void <strong>setSSL</strong>([boolean useSSL='true'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Set SSL flag and alter the internal URL End point pointer</p>
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>useSSL</code> - Set to true or false</dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="setURLEndPoint()"><!-- --></a>
+	<h3>setURLEndPoint</h3>
+	
+	<kbd>public any <strong>setURLEndPoint</strong>(any URLEndPoint)</kbd>
+	
+	<br><br>
+
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>URLEndPoint</code></dd>
+		
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+
+
+
+</body>
+</html>
+
