@@ -30,5 +30,14 @@ $( document ).ready( function(){
 	$( "##FileBrowser-heading h3.panel-title" ).html( "<strong>S3 Remote File Browser</strong>" );
 });
 
+<cfif len(rc.callback)>
+function fbChoose(){
+	var sPath = s3BaseURL + "/" + $selectedItem.val();
+	var sURL = s3BaseURL + "/" + $selectedItemURL.val();
+	var sType = $selectedItemType.val();
+	#rc.callback#( sPath,sURL,sType );
+}
+</cfif>
+
 </script>
 </cfoutput>

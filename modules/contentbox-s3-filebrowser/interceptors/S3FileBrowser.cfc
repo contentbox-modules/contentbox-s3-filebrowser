@@ -4,7 +4,7 @@
 */
 component extends="coldbox.system.Interceptor"{
 	/**
-	* Intercepts the preHandler method to ensure the s3filebrowser is displayed
+	* Intercepts preEvent to ensure the s3filebrowser is displayed
 	*/
 	function preEvent( event, rc, prc, action, eventArguments ){
 		scopeS3FileBrowser( event );
