@@ -4,13 +4,13 @@
     "version":"@build.version@+@build.number@",
     "slug":"contentbox-s3-filebrowser",
     "type":"modules",
-    "homepage":"",
-    "documentation":"",
+    "homepage":"https://github.com/contentbox-modules/contentbox-s3-filebrowser",
+    "documentation":"https://github.com/contentbox-modules/contentbox-s3-filebrowser/wiki",
     "repository":{
         "type":"git",
-        "url":""
+        "url":"https://github.com/contentbox-modules/contentbox-s3-filebrowser"
     },
-    "shortDescription":"Amazon S3 Drop-in filebrowser for Contentbox CMS",
+    "shortDescription":"AWS S3 Drop-in filebrowser for Contentbox CMS",
     "license":[
         {
             "type":"Apache2",
