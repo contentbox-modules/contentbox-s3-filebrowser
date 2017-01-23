@@ -5,14 +5,14 @@ component extends="coldbox.system.testing.BaseTestCase" appMapping="/root" acces
 	property name="Wirebox" inject="Wirebox";
 	property name="AppSettings" inject="wirebox:properties";
 	property name="CFMLFacade";
-	this.loadColdbox=true;
+	//this.loadColdbox=true;
 	/*********************************** LIFE CYCLE Methods ***********************************/
 
 	function beforeAll(){
 		super.beforeAll();
-		super.setup();
-		expect( APPLICATION ).toHaveKey( "cbController" );
-		expect( APPLICATION.cbController ).toBeComponent();
+		//super.setup();
+		// expect( APPLICATION ).toHaveKey( "cbController" );
+		// expect( APPLICATION.cbController ).toBeComponent();
 		// APPLICATION.cbController.getWirebox().autowire( this );
 		// APPLICATION.cbController.getModuleService().reloadAll();
 		// setCFMLFacade( createObject("component","modules.s3sdk.CFMLFacade").init( "ortus-public" ) );
