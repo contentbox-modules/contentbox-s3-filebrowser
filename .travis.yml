@@ -41,14 +41,6 @@ install:
   - mkdir tests/results
   - sudo chmod -R 775 tests/results
 
-before_script:
-  # create test database
-  - mysql -u root -e 'create database contentbox;'
-  # import database
-  - mysql -u root < https://raw.githubusercontent.com/Ortus-Solutions/ContentBox/development/tests/resources/contentbox.sql
-  # Ready for testing
-  - box server start --debug
-
 script:
   - sudo ant -DisTravis=true -Dcfengine=$ENGINE -Dbuild.number=$TRAVIS_BUILD_NUMBER -Dbuild.branch=$TRAVIS_BRANCH -f workbench/build.xml
 
