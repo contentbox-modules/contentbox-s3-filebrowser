@@ -42,9 +42,6 @@ component{
 			"uploads" : {
 				"bucket":"",
 				"prefix":"",
-				"region":"",
-				"cacheControl":"",
-				"expires" : "",
 				"url":""
 			},
 			"filebrowser":{
@@ -133,16 +130,8 @@ component{
 			s3Settings["secretKey"] = environment[ "S3_SECRET_KEY" ];
 		}
 
-		if( structKeyExists( environment, "S3_REGION" ) ){
-			s3Settings.uploads.region = environment[ "S3_REGION" ];
-		}
-
 		if( structKeyExists( environment, "S3_UPLOADS_BUCKET" ) ){
 			s3Settings.uploads.bucket = environment[ "S3_UPLOADS_BUCKET" ];
-		}
-
-		if( structKeyExists( environment, "S3_UPLOADS_PREFIX" ) ){
-			s3Settings.uploads.prefix = environment[ "S3_UPLOADS_PREFIX" ];
 		}
 
 		if( structKeyExists( environment, "S3_UPLOADS_PREFIX" ) ){

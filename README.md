@@ -1,104 +1,76 @@
-﻿```
-   ____            _             _   ____            
-  / ___|___  _ __ | |_ ___ _ __ | |_| __ )  _____  __
- | |   / _ \| '_ \| __/ _ \ '_ \| __|  _ \ / _ \ \/ /
- | |__| (_) | | | | ||  __/ | | | |_| |_) | (_) >  < 
-  \____\___/|_| |_|\__\___|_| |_|\__|____/ \___/_/\_\
-                                                     
+﻿[![Build Status](https://travis-ci.org/contentbox-modules/contentbox-s3-filebrowser.svg?branch=development)](https://travis-ci.org/contentbox-modules/contentbox-s3-filebrowser)
+
+<img src="https://www.contentboxcms.org/__media/ContentBox_300.png" class="img-thumbnail"/>
+
+
+# Contentbox S3 Filebrowser
+
+The Contentbox S3 filebrowser offers a drop-in replacement for the existing filebrowser module.  It is designed to use the existing filebrowser by simply replacing the data used to populate the view.  
+
+##Installation
+
+Forgebox installation:  `box install contentbox-s3-filebrowser
+
+### Coldbox configuration
+The file browser uses an extended version of the `s3sdk` settings.  To configure the filebrowser directly, add the following `s3sdk` settings to your Coldbox.cfc:
+
+```
+s3sdk = {
+	// Your amazon access key
+    accessKey = "",
+    // Your amazon secret key
+    secretKey = "",
+    // The default encryption character set
+    encryption_charset = "utf-8",
+    // SSL mode or not on cfhttp calls.
+    ssl = false,
+    // The filebrowser uploads configuration
+	"uploads" : {
+		"bucket":"YOUR BUCKET NAME",
+		"prefix":"YOUR BUCKET PATH PREFIX",
+		//Enter the base url of your bucket. ( e.g. - Cloudflare distribution URL ) 
+		//if blank will automatically create the default S3 url from your bucket name
+		"url":""
+	},
+	"filebrowser":{
+		//If false, the default filebrowser will be used
+		"enabled":true
+	}
+}
 ```
 
-# ContentBox Modular CMS - A Modular Content Platform
+The module also allows full configuration of your AWS settings from environment variables. This allows you to keep environmental secrets out of your source code respository.  If the following environmental variables are set, they will serve as your Coldbox configuration for S3 communication and uploads:
 
-Copyright 2012 by Luis Majano and Ortus Solutions, Corp
-www.ortussolutions.com
+```
+S3_ACCESS_KEY
+S3_SECRET_KEY
+S3_UPLOADS_BUCKET
+S3_UPLOADS_PREFIX
+S3_UPLOADS_URL
+```
 
-----
+When using environment variables, only the following struct would need to be added to your Coldbox.cfc:
 
-Because of God's grace, this project exists. If you don't like this, then don't read it, its not for you.
-
->"Therefore being justified by faith, we have peace with God through our Lord Jesus Christ:
-By whom also we have access by faith into this grace wherein we stand, and rejoice in hope of the glory of God.
-And not only so, but we glory in tribulations also: knowing that tribulation worketh patience;
-And patience, experience; and experience, hope:
-And hope maketh not ashamed; because the love of God is shed abroad in our hearts by the 
-Holy Ghost which is given unto us. ." Romans 5:5
-
-----
-
-# Welcome to ContentBox
-ContentBox is a modular content management engine based on the popular [ColdBox](www.coldbox.org) MVC framework.
+```
+s3sdk = {
+	"filebrowser":{
+		"enabled":true
+	}
+}
+```
 
 ## License
 Apache License, Version 2.0.
 
-## Versioning
-ContentBox is maintained under the Semantic Versioning guidelines as much as possible.
-
-Releases will be numbered with the following format:
-
-```
-<major>.<minor>.<patch>
-```
-
-And constructed with the following guidelines:
-
-* Breaking backward compatibility bumps the major (and resets the minor and patch)
-* New additions without breaking backward compatibility bumps the minor (and resets the patch)
-* Bug fixes and misc changes bumps the patch
-
 ## Important Links
 
 Source Code
-- https://github.com/Ortus-Solutions/ContentBox
-
-Continuous Integration
-- http://jenkins.staging.ortussolutions.com/job/OS-ContentBox%20BE/
-
-Bug Tracking/Agile Boards
-- https://ortussolutions.atlassian.net/browse/CONTENTBOX
-
-Documentation
-- http://contentbox.ortusbooks.com
-
-Blog
-- http://www.ortussolutions.com/blog
+- https://github.com/contentbox-modules/contentbox-s3-filebrowser
 
 ## System Requirements
 - Lucee 4.5+
-- Railo 4+ (Deprecated)
 - ColdFusion 10+
 
-# ContentBox Installation
-
-You can follow in-depth installation instructions here: http://contentbox.ortusbooks.com/content/installation/index.html or you can use [CommandBox](http://www.ortussolutions.com/products/commandbox) to quickly get up and running via the following commands:
-
-**Stable Release**
-
-```bash
-mkdir mysite && cd mysite
-# Install latest release
-box install contentbox
-box server start --rewritesEnable
-```
-
-**Bleeding Edge Release**
-
-```bash
-mkdir mysite && cd mysite
-# Install latest release
-box install contentbox-be
-box server start --rewritesEnable
-```
-
-## Collaboration
-
-If you want to develop and hack at the source, you will need to download [CommandBox](http://www.ortussolutions.com/products/commandbox) first.  Then in the root of this project, type `box install`.  This will download the necessary dependencies to develop and test ContentBox.  You can then go ahead and start an embedded server `box server start --rewritesEnable` and start hacking around and contributing.  
-
-### Test Suites
-For running our test suites you will need 2 more steps, so please refer to the [Readme](tests/readme.md) in the tests folder.
-
-### UI Development
-If developing CSS and Javascript assets, please refer to the [Developer Guide](workbench/Developer.md) in the `workbench/Developer.md` folder.
 
 ---
  
