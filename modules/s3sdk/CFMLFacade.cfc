@@ -8,6 +8,7 @@ component accessors="true"{
 	property name="SDK"	inject="AmazonS3@s3sdk";
 	property name="S3Bucket";
 	property name="BucketURL";
+	property name="tmpDir";
 
 	public function init( required string bucketName ){
 		VARIABLES.s3Bucket = ARGUMENTS.bucketName;
@@ -139,6 +140,10 @@ component accessors="true"{
 		return fileReadBinary( getBucketURL() & "/" & urlEncodedFormat( arguments.path ) );
 	}
 
+	public function fileCopy( fileObj, path ){
+		return VARIABLES.fileWrite( argumentCollection=arguments );
+	}
+
 	public function fileWrite( fileObj ,path ){
 
 		if( fileExists( fileObj ) ){
@@ -168,6 +173,7 @@ component accessors="true"{
 
 		return SDK.copyObject( VARIABLES.s3Bucket, arguments.path, VARIABLES.s3Bucket, arguments.path, acl  )
 	}
+
 
 	public function fileMove( currentPath, targetPath ){
 		return SDK.renameObject( VARIABLES.s3Bucket, urlEncodedFormat( ARGUMENTS.currentPath ), VARIABLES.s3Bucket, urlEncodedFormat( ARGUMENTS.targetPath ) );
