@@ -1,5 +1,7 @@
 .settings
 logs/*.log
+tests/logs
+includes/tmp
 settings.xml
 .netbeans
 tests/results/*
